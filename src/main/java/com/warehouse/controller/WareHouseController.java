@@ -23,10 +23,16 @@ public class WareHouseController
 	@Autowired
 	private WareHouseService wareHouseService;
 	
-	@GetMapping("/getAvailableTyres")
-	public ResponseEntity<Object> getAvailableTyres(@RequestParam String typeOfVehicle)
+	@GetMapping("/getByMakeBy")
+	public ResponseEntity<Object> getByMakeBy(@RequestParam String makeBy)
 	{
-		return wareHouseService.getAvailableTyres(typeOfVehicle);
+		return wareHouseService.getByMakeBy(makeBy);
+	}
+	
+	@GetMapping("/getAvailableTyres")
+	public ResponseEntity<Object> getAvailableTyres()
+	{
+		return wareHouseService.getAvailableTyres();
 	}
 	
 

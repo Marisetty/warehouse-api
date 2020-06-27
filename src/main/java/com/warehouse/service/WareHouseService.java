@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
  */
 public interface WareHouseService {
 
-	public ResponseEntity<Object> getAvailableTyres(String typeOfVehicle);
+	public ResponseEntity<Object> getAvailableTyres();
+
+	public ResponseEntity<Object> getByMakeBy(String makeBy);
 
 }
